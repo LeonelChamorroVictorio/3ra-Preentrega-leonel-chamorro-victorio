@@ -73,7 +73,8 @@ h2 {
   margin: auto; }
 
 .p-habilidades {
-  color: aliceblue; }
+  color: aliceblue;
+  height: 75px; }
 
 .iframe-habili {
   margin-bottom: 80px;
