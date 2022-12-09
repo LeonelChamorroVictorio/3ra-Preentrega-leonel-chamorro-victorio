@@ -1,0 +1,287 @@
+@import "variables.scss";
+@import "mixin.scss";
+@import "mapas.scss";
+
+
+//nestin
+.navbar-brand{
+    &-img{
+        width: auto;    
+        height: auto;
+    }
+    
+}
+// fin nestin
+
+// variables
+
+body{
+    background-color: $color-principal;
+}
+
+// fin variables
+
+// mixin
+ .habilidades{
+    @include medidas( 60px, 60px,)
+ }
+
+// fin mixin
+
+// listas
+.hr-pill{
+    background-color: nth($colores , 4);
+}
+// fin listas
+
+// mapas
+footer{
+    @each $frases, $color in $coloresRedes{
+        .#{$frases}{
+            color: $color;
+            font-size: 20px;
+        }
+    }
+  }
+
+// fin mapas
+
+
+//mi css
+
+    main div h1{
+    color: rgb(255, 188, 19);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hr-pill{
+  border: none;
+  color: rgb(255, 188, 19);
+  height: 8px;
+  text-align: center;
+  text-decoration: solid;
+  display:flex;
+  width: 600px;
+  margin: auto;
+  border-radius: 16px;
+  opacity: 1;
+  }
+  
+  .img-nosotros{
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  }
+  
+  h2{
+  color: rgb(244, 184, 35);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .iframe-blog{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  }
+  
+  .container-blog{
+  display: grid;
+  margin-top: 60px;
+  padding-bottom: 60px;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "grid1 grid2"
+    "grid3 grid4";
+    gap: 30px;
+  }
+  
+  .grid-blog{
+  margin: auto;
+  }
+  
+  .p-habilidades{
+  color: aliceblue;
+  }
+  
+  .iframe-habili{
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  
+  }
+  
+  .p-nosotros{
+  color: aliceblue;
+  padding: 60px;
+  }
+  
+  .formulario{
+  margin: 100px;
+  }
+  
+  .form {
+  background-color: rgb(77, 77, 77);
+  width: 90%;
+  margin: auto;
+  max-width: 400px;
+  border-radius: 1em;
+  padding: 3.5em 1.5em;
+  }
+  
+  .form-container {
+  width: 100%;
+  display: grid;
+  gap: 1em;
+  grid-auto-columns: 100%;
+  }
+  
+  .form-title {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 0.4em;
+  }
+  
+  .form-input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.8em 1em;
+  outline: none;
+  border: none;
+  border: 1px solid C;
+  border-radius: 0.2em;
+  }
+  
+  .form-input--message {
+  resize: none;
+  padding: 1.8em 1em;
+  margin-bottom: 0.5em;
+  }
+  
+  .form-cta {
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: rgb(255, 188, 19);;
+  color: rgb(29, 28, 28);
+  border: none;
+  font-weight: 300;
+  padding: 10px 30px;
+  border-radius: 0.2em;
+  font-weight: 600;
+  }
+  
+  
+  
+  .hr-pill-footer{
+  background-color: black ;
+  border: none;
+  color: rgb(255, 188, 19);
+  height: 8px;
+  text-align: center;
+  text-decoration: solid;
+  display:flex;
+  width: 600px;
+  margin-bottom: 4rem;
+  border-radius: 16px;
+  opacity: 1;
+  }
+  
+  .pie-pagina .box figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .pie-pagina {
+  width: 100%;
+  background-color: rgb(255, 187, 0);
+  }
+  
+  .pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 45px 0px;
+  }
+  
+  .pie-pagina img {
+  width: 100px;
+  }
+  .pie-pagina h2 {
+  color: black;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  }
+  .pie-pagina p {
+  color: black;
+  margin-bottom: 10px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  }
+  
+  .pie-pagina .grupo-2 {
+  background-color:rgb(29, 28, 28) ;
+  padding: 15px 10px;
+  text-align: center;
+  color: aliceblue;
+  }
+  .pie-pagina .grupo-2 small {
+  font-size: 15px;
+  }
+    
+  @media (max-width: 991px){
+  body{
+    margin: auto;
+  }
+  
+  .img-nosotros{
+    display: none;
+  }
+  .iframe-blog{
+    display: none;
+  }
+  
+  .iframe-habili{
+    display: none; 
+  }
+  
+  .p-habilidades{
+    padding: 10%;
+  }
+  
+  .hr-pill{
+    width: 300px;
+  
+  }
+  
+  .hr-pill-footer{
+    width: 300px;
+  }
+  
+  .p-footer{
+    padding: 10px;
+    margin-right: 5px;
+  }
+  
+  .img-footer{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card{
+    width: 90vw !important; 
+    padding: 30px;
+  }
+  }
+  
+  @media (max-width:575px) {
+  
+  .hr-pill-footer{
+  display: none;
+  }
+  
+  }
